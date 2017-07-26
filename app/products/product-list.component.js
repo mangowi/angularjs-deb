@@ -70,6 +70,10 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
+    ProductListComponent.prototype.ngOnInit = function () {
+        // Perform initialization
+        console.log("Initial this has been called");
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
