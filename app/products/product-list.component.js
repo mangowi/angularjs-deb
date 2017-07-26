@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
+        this.pageTitle = "All Product List";
     }
     return ProductListComponent;
 }());
