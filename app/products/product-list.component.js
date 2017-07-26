@@ -10,6 +10,8 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = "All Product List";
+        this.imageWidth = 40;
+        this.imageMargin = 2;
         this.products = [
             {
                 "productId": 1,
