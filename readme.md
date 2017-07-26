@@ -22,3 +22,52 @@
      *ngFor
        Define the local variable with let
        Specify  'of' : 'let' product of products
+
+
+   Data Binding
+    Component to DOM
+       ## interpolation: {pageTitle}
+       ## Property Binding :
+        '''js
+
+            <img *ngIf="showImage"
+                            [src]="product.imageUrl"
+                            [title]="product.productName"
+                            [style.width.px]="imageWidth"
+                             [style.margin.px]="imageMargin"
+
+                              >
+
+        '''
+   ## Event Binding - Listen for event
+
+    DOM ->  Component
+    '''js
+
+      <button class="btn btn-primary"
+             (click)="toggleImage()">
+             {{showImage ? 'Hide': 'Show'}} Product Image
+             </button>
+    '''
+
+
+    ##Two-Way Binding
+        Component to DOM
+
+         <input type="text"
+             [(ngModel)] = 'listFilter'/>
+
+
+         ngModel
+            Define ngModel as a Banana in a box
+            Be sure to add FormModule on the app module
+
+            This insure directive is all over
+
+
+          #Pipes
+            specify pipe character  |
+            pipe name
+            pipe parameters
+                - separated with colons
+                     <td>{{product.price | currency: 'DKK':true:'1.2-2'}}</td>
