@@ -12,9 +12,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var StartComponent = (function () {
     function StartComponent() {
+        this.ratingClicked = new core_1.EventEmitter();
     }
     StartComponent.prototype.ngOnChanges = function () {
         this.starWidth = this.rating * 86 / 5;
+    };
+    StartComponent.prototype.onClick = function () {
+        this.ratingClicked.emit("The rating " + this.rating + " was clicked");
     };
     return StartComponent;
 }());
@@ -22,6 +26,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Number)
 ], StartComponent.prototype, "rating", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], StartComponent.prototype, "ratingClicked", void 0);
 StartComponent = __decorate([
     core_1.Component({
         selector: 'ai-start',

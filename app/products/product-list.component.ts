@@ -76,5 +76,9 @@ export class ProductListComponent implements  OnInit {
         // Perform initialization
         console.log("Initial this has been called");
     }
+    
+    onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
+    }
 
 }
